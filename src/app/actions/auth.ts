@@ -1,43 +1,46 @@
 'use server';
 
-import { cookies } from 'next/headers';
+import {
+  getAuth as getClientAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from 'firebase/auth';
+import { initializeFirebase } from '@/firebase';
 import { redirect } from 'next/navigation';
+import { cookies } from 'next/headers';
+import { getAuth as getAdminAuth } from 'firebase-admin/auth';
+import { initializeApp, getApps, App } from 'firebase-admin/app';
+import { firebaseConfig } from '@/firebase/config';
 
-const FAKE_USER_EMAIL = 'test@example.com';
-const FAKE_USER_PASSWORD = 'password123';
-
-export async function signIn(formData: FormData) {
-  const email = formData.get('email') as string;
-  const password = formData.get('password') as string;
-
-  // In a real app, you'd validate credentials against a database
-  if (email === FAKE_USER_EMAIL && password === FAKE_USER_PASSWORD) {
-    cookies().set('auth_token', email, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24, // 1 day
-      path: '/',
-    });
-    redirect('/dashboard');
+function getAdminApp(): App {
+  if (getApps().length) {
+    return getApps()[0]!;
   }
 
-  // Redirect back to login with an error message
-  redirect('/login?error=InvalidCredentials');
+  return initializeApp({
+    credential: {
+      projectId: firebaseConfig.projectId,
+      clientEmail: process.env.FIREBASE_CLIENT_EMAIL!,
+      privateKey: (process.env.FIREBASE_PRIVATE_KEY || '').replace(
+        /\\n/g,
+        '\n'
+      ),
+    },
+  });
 }
 
-export async function signUp(formData: FormData) {
-  const email = formData.get('email') as string;
-  
-  // In a real app, you'd create a new user in your database.
-  // For this mock, we'll just log them in as the new user.
-  cookies().set('auth_token', email, {
+async function createSessionCookie(idToken: string) {
+  const expiresIn = 60 * 60 * 24 * 5 * 1000; // 5 days
+  const sessionCookie = await getAdminAuth(getAdminApp()).createSessionCookie(
+    idToken,
+    { expiresIn }
+  );
+  cookies().set('auth_token', sessionCookie, {
+    maxAge: expiresIn,
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    maxAge: 60 * 60 * 24, // 1 day
     path: '/',
   });
-
-  redirect('/dashboard');
 }
 
 export async function signOut() {

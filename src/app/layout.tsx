@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import OracleChat from '@/components/ai/OracleChat';
+import { FirebaseClientProvider } from '@/firebase';
 
 export const metadata: Metadata = {
   title: 'LionsTour Platform',
@@ -35,11 +36,13 @@ export default function RootLayout({
           'font-body antialiased flex flex-col min-h-screen'
         )}
       >
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <Toaster />
-        <OracleChat />
+        <FirebaseClientProvider>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <Toaster />
+          <OracleChat />
+        </FirebaseClientProvider>
       </body>
     </html>
   );
