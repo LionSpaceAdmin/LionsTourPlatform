@@ -1,0 +1,24 @@
+# **App Name**: LionsTour Platform
+
+## Core Features:
+
+- Firebase Authentication: Secure user authentication using Firebase Auth with Email/Password and Google sign-in providers. This system will be seamlessly integrated, providing a single, trusted identity for users across the platform for personalization, bookings, and saving itineraries.
+- Firestore Database: A native Firestore database will serve as the flexible, scalable, and real-time core for the platform's data. This includes storing and managing:  - Core Narrative Content: The foundational stories, including the "Four Pillars," "The Traveler's Covenant," and all multilingual text strings. - User Profiles: Rich user profiles that go beyond basic information to include travel preferences, saved itineraries, and a history of booked experiences.  - Guide Stories & Profiles: In-depth profiles for each "Warrior-Guide," focusing on their personal narrative, specialties, photos, and videos. - Experiences, Bookings, and Reviews: Detailed documents for each tour experience, linked to guides, user bookings, and user-submitted reviews to build a robust ecosystem of trust.
+- Experiences Discovery: A visually rich and immersive interface for users to discover tour experiences via the Next.js web app. The discovery process will be driven by the "Four Pillars" narrative, allowing users to filter not just by location or date, but by the *type of story* they want to experience.
+- Profile Management: A secure and intuitive account section (`/account`) where users can manage their profile settings, view their upcoming and past trips, and manage their communication preferences.
+- Containerization with Docker: A multi-stage `Dockerfile` is used to containerize the Next.js application. This ensures a lightweight, secure, and consistent deployment environment, reducing discrepancies between development, staging, and production.
+- Automated CI/CD Pipeline: A full GitOps workflow is established with Cloud Build. The pipeline will automatically build the Docker container, push it to Artifact Registry, and deploy it to Cloud Run on every push to the `main` branch, ensuring rapid, reliable, and automated releases.
+- AI Itinerary Planner: This core feature, powered by **Vertex AI's Gemini API**, moves beyond simple recommendations. It engages the user in a dialogue to understand their desired "feeling," "theme," or "question" for their trip. The AI then crafts a complete, visual itinerary, plotted directly on an integrated **Google Maps** interface. Crucially, the AI explains the *narrative reasoning* behind its choices, connecting different sites and experiences into a coherent, story-driven journey.
+- AI Personal Assistant ("The Oracle"): A persistent, RAG-powered chatbot, available from the landing page. It is trained on a secure, curated knowledge base (including the "Traveler's Covenant," Academy articles, and up-to-date safety information). It is designed to answer complex and sensitive questions about travel in Israel, the post-war reality, cultural etiquette, and logistics, all within the authoritative and reassuring "Warrior-Guide" voice of the brand.
+- AI-Powered Personalization & Discovery: The platform learns from user interactions. It will proactively suggest relevant articles from the "Academy," highlight guides whose personal stories align with a user's stated interests, and dynamically tailor the content on the dashboard to create a truly individual and evolving experience.
+- Deep & Pervasive AI Integration: AI is not a single feature but the core intelligence layer of the platform, designed to assist, guide, and personalize the user's journey at every step.
+
+## Style Guidelines:
+
+- Deep Charcoal (`#212121`): For text and strong structural elements, conveying stability and seriousness.
+- Warm Sand (`#D2B48C`): Used for backgrounds, cards, and secondary elements to evoke the landscape of Israel.
+- Majestic Gold/Amber (`#FFBF00`): Used as the primary accent color for all calls-to-action, highlights, and key interactive elements, signifying value, light, and heritage.
+- Off-white (`#F8F8F8`) or a very light cream provides a warm, premium, and clean backdrop that is easy on the eyes and allows the powerful imagery to stand out.
+- 'Inter' sans-serif font is used universally to maintain a clean, highly legible, and modern aesthetic across all text elements.
+- Minimalist, strong, and meaningful icons, potentially incorporating subtle lion motifs or other symbols of strength and heritage.
+- The layout is cinematic, utilizing powerful visuals, generous negative space, and a clear narrative flow to guide the user's eye. The focus is on **visual storytelling** through high-quality, authentic imagery and video. The interface is designed to be intuitive and clean, with clear calls-to-action that stand out.

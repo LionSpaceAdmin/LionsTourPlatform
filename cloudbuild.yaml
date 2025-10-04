@@ -1,0 +1,36 @@
+steps:
+# 1. Build the Docker image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/${_SERVICE_NAME}:${SHORT_SHA}', '.']
+  id: 'Build'
+
+# 2. Push the Docker image to Artifact Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/${_SERVICE_NAME}:${SHORT_SHA}']
+  id: 'Push'
+
+# 3. Deploy to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - '${_SERVICE_NAME}'
+  - '--image=${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/${_SERVICE_NAME}:${SHORT_SHA}'
+  - '--region=${_REGION}'
+  - '--platform=managed'
+  - '--allow-unauthenticated' # Change as per your security requirements
+  id: 'Deploy'
+
+# Define substitutions
+substitutions:
+  _SERVICE_NAME: 'lionstour-app'
+  _REGION: 'us-central1'
+  _REPOSITORY: 'app-images'
+
+# Set the timeout for the build
+timeout: '1200s'
+
+# Specify the images to be pushed to Artifact Registry
+images:
+- '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/${_SERVICE_NAME}:${SHORT_SHA}'

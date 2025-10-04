@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-landing",
+      "description": "A panoramic view of the Jerusalem skyline at sunset, with the Dome of the Rock prominent.",
+      "imageUrl": "https://images.unsplash.com/photo-1638468090298-a555e409b493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxKZXJ1c2FsZW0lMjBzdW5zZXR8ZW58MHx8fHwxNzU5NjA5OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Jerusalem sunset"
+    },
+    {
+      "id": "experience-1",
+      "description": "Exploring the ancient alleyways of the Old City of Jerusalem.",
+      "imageUrl": "https://images.unsplash.com/photo-1628175810529-8cb4a4d374e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxKZXJ1c2FsZW0lMjBvbGQlMjBjaXR5fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Jerusalem old city"
+    },
+    {
+      "id": "experience-2",
+      "description": "Hiking through the lush greenery of the Galilee region.",
+      "imageUrl": "https://images.unsplash.com/photo-1642756950745-4bbb59cde16a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxHYWxpbGVlJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc1OTYwOTkzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Galilee landscape"
+    },
+    {
+      "id": "experience-3",
+      "description": "A vibrant market scene in Tel Aviv's Carmel Market.",
+      "imageUrl": "https://images.unsplash.com/photo-1674003487179-2d520253cbb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxUZWwlMjBBdml2JTIwbWFya2V0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Tel Aviv market"
+    },
+    {
+      "id": "experience-4",
+      "description": "Floating in the mineral-rich waters of the Dead Sea.",
+      "imageUrl": "https://images.unsplash.com/photo-1590137542363-d5af86ff65a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxEZWFkJTIwU2VhfGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Dead Sea"
+    },
+    {
+      "id": "experience-5",
+      "description": "A view of the Bahá'í Gardens in Haifa.",
+      "imageUrl": "https://images.unsplash.com/photo-1715882352252-168c62059a11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxIYWlmYSUyMGdhcmRlbnN8ZW58MHx8fHwxNzU5NjA5OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Haifa gardens"
+    },
+    {
+      "id": "experience-6",
+      "description": "Modern architecture in the city of Tel Aviv.",
+      "imageUrl": "https://images.unsplash.com/photo-1740573909833-731db2bab6aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxUZWwlMjBBdml2JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Tel Aviv architecture"
+    },
+    {
+      "id": "guide-1",
+      "description": "Portrait of a friendly tour guide.",
+      "imageUrl": "https://images.unsplash.com/photo-1568153878744-22637b3fa3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "guide portrait"
+    },
+    {
+      "id": "guide-2",
+      "description": "Portrait of an experienced tour guide.",
+      "imageUrl": "https://images.unsplash.com/photo-1600261731256-3c6622403e69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "guide portrait"
+    },
+    {
+      "id": "account-hero",
+      "description": "A traveler looking over a vast desert landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1613109526778-27605f1f27d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NjA0OTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desert landscape"
+    }
+  ]
 }
