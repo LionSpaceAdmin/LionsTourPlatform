@@ -59,6 +59,12 @@
       "description": "A traveler looking over a vast desert landscape.",
       "imageUrl": "https://images.unsplash.com/photo-1613109526778-27605f1f27d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NjA0OTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "desert landscape"
+    },
+    {
+      "id": "ai-planner-hero",
+      "description": "A person pointing at a map with pins.",
+      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map travel"
     }
   ]
 }

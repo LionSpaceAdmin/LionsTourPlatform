@@ -24,7 +24,7 @@ steps:
 
 # Define substitutions
 substitutions:
-  _SERVICE_NAME: 'lionstour-app'
+  _SERVICE_NAME: 'lionsaitour-app'
   _REGION: 'us-central1'
   _REPOSITORY: 'app-images'
 
