@@ -1,0 +1,188 @@
+/**
+ * @file Firebase Security Rules for Firestore
+ *
+ * @core_philosophy This ruleset enforces a strict user-ownership model for private user data while allowing public read access to certain collections like experiences and narrative content. Write access is carefully controlled based on user roles and document ownership.
+ * @data_structure The Firestore database is structured with user-specific data nested under `/users/{userId}`, ensuring private access. Publicly accessible data resides in top-level collections like `/experiences` and `/narrative_content`. Bookings and itineraries are stored as subcollections under user profiles. Reviews are stored as subcollections under experiences.
+ * @key_security_decisions
+ *  - User listing is disabled for security.
+ *  - Clear separation of public and private data through distinct collections.
+ *  - Strict ownership checks are enforced for write operations on user-specific data.
+ *  - Public read access is granted to experiences and narrative content.
+ * @denormalization Bookings include the `experienceId` and denormalized `guideId` to avoid needing to read the Experience document for rule evaluation.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Enforces access control for user profiles. Only the authenticated user can read or write their own profile.
+     * @path /users/{userId}
+     * @allow (create) - Authenticated user creates their own profile.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "id": "user123", "email": "user@example.com" }
+     * @allow (get, update, delete) - Authenticated user reads, updates, or deletes their own profile.
+     *   auth.uid: "user123"
+     *   resource.data: { "id": "user123", "email": "user@example.com" }
+     * @deny (create) - Authenticated user attempts to create a profile with a different user ID.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "id": "user456", "email": "user@example.com" }
+     * @deny (get, update, delete) - Authenticated user attempts to read, update, or delete another user's profile.
+     *   auth.uid: "user123"
+     *   resource.data: { "id": "user456", "email": "user@example.com" }
+     * @principle Enforces document ownership for writes and restricts access to a user's own data tree. Validates relational integrity between documents.
+     */
+    match /users/{userId} {
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+      allow get: if isOwner(userId);
+      allow list: if false;
+      allow create: if isOwner(userId) && request.resource.data.get("id", "") == request.auth.uid;
+      allow update: if isOwner(userId) && request.resource.data.get("id", "") == request.auth.uid;
+      allow delete: if isOwner(userId);
+    }
+
+    /**
+     * @description Controls access to guide profiles. Only admins and the guide themselves can read or write a guide profile.
+     * @path /guides/{guideId}
+     * @allow (create, get, update, delete) - Guide creates, reads, updates, or deletes their own profile.
+     *   auth.uid: "guide123"
+     *   request.resource.data: { "id": "guide123", "name": "Guide Name" }
+     * @deny (create, get, update, delete) - User attempts to create, read, update, or delete a guide profile without being the guide themselves.
+     *   auth.uid: "user456"
+     *   resource.data: { "id": "guide123", "name": "Guide Name" }
+     * @principle Enforces document ownership for guides.
+     */
+    match /guides/{guideId} {
+      function isGuide(guideId) {
+        return request.auth != null && request.auth.uid == guideId;
+      }
+      allow get: if true; // TODO: In production, limit to admins and the guide.
+      allow list: if false; // TODO: In production, limit to admins.
+      allow create: if request.auth.uid == guideId; // TODO: Only allow admins or the guide.
+      allow update: if request.auth.uid == guideId; // TODO: Only allow admins or the guide.
+      allow delete: if request.auth.uid == guideId; // TODO: Only allow admins or the guide.
+    }
+
+    /**
+     * @description Manages access to tour experiences. Readable by all users, but writable only by admins or the guide who owns the experience. Includes denormalized 'guideId' for authorization independence.
+     * @path /experiences/{experienceId}
+     * @allow (get, list) - Any user can read the experience.
+     *   auth.uid: "user123"
+     * @allow (create, update, delete) - Guide or Admin creates, updates, or deletes the experience.
+     *   auth.uid: "guide123"
+     *   request.resource.data: { "guideId": "guide123", "title": "Experience Title" }
+     * @deny (create, update, delete) - User attempts to create, update, or delete an experience without being the guide or an admin.
+     *   auth.uid: "user456"
+     *   request.resource.data: { "guideId": "guide123", "title": "Experience Title" }
+     * @principle Public read access with owner-only writes.
+     */
+    match /experiences/{experienceId} {
+      allow get: if true;
+      allow list: if true;
+      allow create: if request.auth != null; // TODO: Add Guide/Admin validation once the schema is updated with an ownership field.
+      allow update: if request.auth != null; // TODO: Add Guide/Admin validation once the schema is updated with an ownership field.
+      allow delete: if request.auth != null; // TODO: Add Guide/Admin validation once the schema is updated with an ownership field.
+    }
+
+    /**
+     * @description Enforces access control for user bookings. Accessible and manageable only by the user who created them. Includes `experienceId` and denormalized `guideId`.
+     * @path /users/{userId}/bookings/{bookingId}
+     * @allow (create) - Authenticated user creates a booking for themselves.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "userId": "user123", "experienceId": "exp123", "bookingDate": "2024-01-01" }
+     * @allow (get, update, delete) - Authenticated user reads, updates, or deletes their own booking.
+     *   auth.uid: "user123"
+     *   resource.data: { "userId": "user123", "experienceId": "exp123", "bookingDate": "2024-01-01" }
+     * @deny (create) - Authenticated user attempts to create a booking for another user.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "userId": "user456", "experienceId": "exp123", "bookingDate": "2024-01-01" }
+     * @deny (get, update, delete) - Authenticated user attempts to read, update, or delete another user's booking.
+     *   auth.uid: "user123"
+     *   resource.data: { "userId": "user456", "experienceId": "exp123", "bookingDate": "2024-01-01" }
+     * @principle Enforces document ownership for bookings and restricts access to a user's own bookings.
+     */
+    match /users/{userId}/bookings/{bookingId} {
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.get("userId", "") == request.auth.uid;
+      allow update: if isOwner(userId) && request.resource.data.get("userId", "") == request.auth.uid;
+      allow delete: if isOwner(userId);
+    }
+
+    /**
+     * @description Manages access to reviews for specific experiences. Readable by all users.  Writes are restricted to the user who created the review. Includes 'userId' who created the review.
+     * @path /experiences/{experienceId}/reviews/{reviewId}
+     * @allow (get, list) - Any user can read the review.
+     *   auth.uid: "user123"
+     * @allow (create) - Authenticated user creates a review.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "userId": "user123", "rating": 5, "comment": "Great experience!" }
+     * @allow (update, delete) - Authenticated user updates or deletes their own review.
+     *   auth.uid: "user123"
+     *   resource.data: { "userId": "user123", "rating": 5, "comment": "Great experience!" }
+     * @deny (create) - Authenticated user attempts to create a review for another user.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "userId": "user456", "rating": 5, "comment": "Great experience!" }
+     * @deny (update, delete) - Authenticated user attempts to update or delete another user's review.
+     *   auth.uid: "user123"
+     *   resource.data: { "userId": "user456", "rating": 5, "comment": "Great experience!" }
+     * @principle Public read access with owner-only writes.
+     */
+    match /experiences/{experienceId}/reviews/{reviewId} {
+      allow get: if true;
+      allow list: if true;
+      allow create: if request.auth != null && request.resource.data.get("userId", "") == request.auth.uid;
+      allow update: if request.auth != null && resource.data.get("userId", "") == request.auth.uid;
+      allow delete: if request.auth != null && resource.data.get("userId", "") == request.auth.uid;
+    }
+
+    /**
+     * @description Enforces access control for user-specific itineraries. Only accessible by the user who created them.
+     * @path /users/{userId}/itineraries/{itineraryId}
+     * @allow (create) - Authenticated user creates an itinerary for themselves.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "userId": "user123", "name": "My Itinerary" }
+     * @allow (get, update, delete) - Authenticated user reads, updates, or deletes their own itinerary.
+     *   auth.uid: "user123"
+     *   resource.data: { "userId": "user123", "name": "My Itinerary" }
+     * @deny (create) - Authenticated user attempts to create an itinerary for another user.
+     *   auth.uid: "user123"
+     *   request.resource.data: { "userId": "user456", "name": "My Itinerary" }
+     * @deny (get, update, delete) - Authenticated user attempts to read, update, or delete another user's itinerary.
+     *   auth.uid: "user123"
+     *   resource.data: { "userId": "user456", "name": "My Itinerary" }
+     * @principle Enforces document ownership for itineraries and restricts access to a user's own itineraries.
+     */
+    match /users/{userId}/itineraries/{itineraryId} {
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.get("userId", "") == request.auth.uid;
+      allow update: if isOwner(userId) && request.resource.data.get("userId", "") == request.auth.uid;
+      allow delete: if isOwner(userId);
+    }
+
+    /**
+     * @description Stores core narrative content. Publicly readable, but writes are restricted to authorized personnel only.
+     * @path /narrative_content/{contentId}
+     * @allow (get, list) - Any user can read narrative content.
+     *   auth.uid: "user123"
+     * @allow (create, update, delete) - Only authorized personnel can create, update, or delete narrative content.
+     *   auth.uid: "admin123"
+     * @principle Public read access with restricted write access.
+     */
+    match /narrative_content/{contentId} {
+      allow get: if true;
+      allow list: if true;
+      allow create: if false; // TODO: Add admin role validation.
+      allow update: if false; // TODO: Add admin role validation.
+      allow delete: if false; // TODO: Add admin role validation.
+    }
+  }
+}

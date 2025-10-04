@@ -1,0 +1,446 @@
+{
+  "entities": {
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Represents a user's profile with their preferences, travel history, and other relevant information.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user profile."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "User's first name."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "User's last name."
+        },
+        "travelPreferences": {
+          "type": "string",
+          "description": "User's travel preferences (e.g., interests, budget, travel style)."
+        },
+        "savedItineraryIds": {
+          "type": "array",
+          "description": "References to saved itineraries. (Relationship: UserProfile 1:N Itinerary)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bookingHistoryIds": {
+          "type": "array",
+          "description": "References to booking history. (Relationship: UserProfile 1:N Booking)",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "email"
+      ]
+    },
+    "GuideProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "GuideProfile",
+      "type": "object",
+      "description": "Represents a guide's profile with their personal narrative, specialties, and contact information.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the guide profile."
+        },
+        "name": {
+          "type": "string",
+          "description": "Guide's full name."
+        },
+        "specialties": {
+          "type": "array",
+          "description": "Guide's areas of expertise or specialization.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bio": {
+          "type": "string",
+          "description": "Guide's biography or personal narrative."
+        },
+        "photoUrl": {
+          "type": "string",
+          "description": "URL to the guide's profile picture.",
+          "format": "uri"
+        },
+        "videoUrl": {
+          "type": "string",
+          "description": "URL to the guide's promotional video.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "Experience": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Experience",
+      "type": "object",
+      "description": "Represents a tour experience offered on the platform.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the experience."
+        },
+        "guideId": {
+          "type": "string",
+          "description": "Reference to the GuideProfile offering this experience. (Relationship: GuideProfile 1:N Experience)"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the experience."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the experience."
+        },
+        "location": {
+          "type": "string",
+          "description": "Location where the experience takes place."
+        },
+        "duration": {
+          "type": "string",
+          "description": "Duration of the experience (e.g., 2 hours, 1 day)."
+        },
+        "price": {
+          "type": "number",
+          "description": "Price of the experience."
+        },
+        "pillar": {
+          "type": "string",
+          "description": "The 'Four Pillars' narrative associated with the experience."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "Main image url for the experience.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "guideId",
+        "title",
+        "description",
+        "location",
+        "duration",
+        "price"
+      ]
+    },
+    "Booking": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Booking",
+      "type": "object",
+      "description": "Represents a user's booking for a specific experience.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the booking."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to the UserProfile who made the booking. (Relationship: UserProfile 1:N Booking)"
+        },
+        "experienceId": {
+          "type": "string",
+          "description": "Reference to the Experience that was booked. (Relationship: Experience 1:N Booking)"
+        },
+        "bookingDate": {
+          "type": "string",
+          "description": "Date and time the booking was made.",
+          "format": "date-time"
+        },
+        "experienceDate": {
+          "type": "string",
+          "description": "Date and time the experience is scheduled for.",
+          "format": "date-time"
+        },
+        "numberOfParticipants": {
+          "type": "number",
+          "description": "Number of participants included in the booking."
+        },
+        "totalPrice": {
+          "type": "number",
+          "description": "Total price paid for the booking."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "experienceId",
+        "bookingDate",
+        "experienceDate",
+        "numberOfParticipants",
+        "totalPrice"
+      ]
+    },
+    "Review": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Review",
+      "type": "object",
+      "description": "Represents a user's review of a specific experience.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the review."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to the UserProfile who wrote the review. (Relationship: UserProfile 1:N Review)"
+        },
+        "experienceId": {
+          "type": "string",
+          "description": "Reference to the Experience being reviewed. (Relationship: Experience 1:N Review)"
+        },
+        "rating": {
+          "type": "number",
+          "description": "Rating given by the user (e.g., 1-5 stars)."
+        },
+        "comment": {
+          "type": "string",
+          "description": "User's comments about the experience."
+        },
+        "reviewDate": {
+          "type": "string",
+          "description": "Date the review was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "experienceId",
+        "rating",
+        "comment",
+        "reviewDate"
+      ]
+    },
+    "Itinerary": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Itinerary",
+      "type": "object",
+      "description": "Represents a user's saved itinerary, possibly generated by the AI planner.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the itinerary."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to the UserProfile who created the itinerary. (Relationship: UserProfile 1:N Itinerary)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the itinerary."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the itinerary."
+        },
+        "experienceIds": {
+          "type": "array",
+          "description": "References to the Experiences included in the itinerary. (Relationship: Itinerary N:N Experience)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "creationDate": {
+          "type": "string",
+          "description": "Date the itinerary was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "name",
+        "creationDate"
+      ]
+    },
+    "NarrativeContent": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "NarrativeContent",
+      "type": "object",
+      "description": "Represents core narrative content, such as the 'Four Pillars' or 'Traveler's Covenant'.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the narrative content."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the narrative content."
+        },
+        "content": {
+          "type": "string",
+          "description": "The actual text or multimedia content of the narrative."
+        },
+        "contentType": {
+          "type": "string",
+          "description": "Type of content (e.g., 'text', 'image', 'video')."
+        },
+        "language": {
+          "type": "string",
+          "description": "Language of the content (e.g., 'en', 'he')."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "content",
+        "contentType",
+        "language"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores user profiles.  The 'userId' parameter corresponds to the Firebase Auth UID. This path ensures that each user profile is only accessible by the user themselves.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The Firebase Auth UID of the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/guides/{guideId}",
+        "definition": {
+          "entityName": "GuideProfile",
+          "schema": {
+            "$ref": "#/backend/entities/GuideProfile"
+          },
+          "description": "Stores guide profiles. Only accessible by admins and the guide themselves.",
+          "params": [
+            {
+              "name": "guideId",
+              "description": "The unique ID of the guide."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/experiences/{experienceId}",
+        "definition": {
+          "entityName": "Experience",
+          "schema": {
+            "$ref": "#/backend/entities/Experience"
+          },
+          "description": "Stores tour experiences.  Readable by all users, but writable only by admins or the guide who owns the experience. Includes denormalized 'guideId' for authorization independence.",
+          "params": [
+            {
+              "name": "experienceId",
+              "description": "The unique ID of the experience."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/bookings/{bookingId}",
+        "definition": {
+          "entityName": "Booking",
+          "schema": {
+            "$ref": "#/backend/entities/Booking"
+          },
+          "description": "Stores user bookings. Accessible and manageable only by the user who created them. Includes `experienceId` and denormalized `guideId`.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The Firebase Auth UID of the user."
+            },
+            {
+              "name": "bookingId",
+              "description": "The unique ID of the booking."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/experiences/{experienceId}/reviews/{reviewId}",
+        "definition": {
+          "entityName": "Review",
+          "schema": {
+            "$ref": "#/backend/entities/Review"
+          },
+          "description": "Stores reviews for specific experiences. Readable by all users.  Writes are restricted to the user who created the review. Includes 'userId' who created the review.",
+          "params": [
+            {
+              "name": "experienceId",
+              "description": "The unique ID of the experience."
+            },
+            {
+              "name": "reviewId",
+              "description": "The unique ID of the review."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/itineraries/{itineraryId}",
+        "definition": {
+          "entityName": "Itinerary",
+          "schema": {
+            "$ref": "#/backend/entities/Itinerary"
+          },
+          "description": "Stores user-specific itineraries. Only accessible by the user who created them.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The Firebase Auth UID of the user."
+            },
+            {
+              "name": "itineraryId",
+              "description": "The unique ID of the itinerary."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/narrative_content/{contentId}",
+        "definition": {
+          "entityName": "NarrativeContent",
+          "schema": {
+            "$ref": "#/backend/entities/NarrativeContent"
+          },
+          "description": "Stores core narrative content. Publicly readable, but writes are restricted to authorized personnel only.",
+          "params": [
+            {
+              "name": "contentId",
+              "description": "The unique ID of the narrative content."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to ensure security, scalability, and debuggability, adhering to the core design principles of Authorization Independence, Clarity of Intent, DBAC (Database-Based Access Control), and QAPs (Rules are not Filters).  Authorization Independence is achieved through denormalization. For instance, if access to a subcollection depends on attributes of a parent document, those attributes are copied into the subcollection documents, avoiding `get()` calls in security rules. Structural Segregation ensures that each collection has a homogeneous security posture, with data of varying access needs stored in separate collections. Access Modeling utilizes path-based ownership for private data and membership maps for collaborative data.  Specifically:\n\n*   **User Profiles**: Stored under `/users/{userId}` for private access, enabling simple ownership-based security rules.\n*   **Guide Profiles**: Stored under `/guides/{guideId}`, accessible by admins and the guide themselves.\n*   **Experiences**: Stored under `/experiences/{experienceId}`, accessible for reading by all users but writable only by admins or the guide who owns the experience (guide ID denormalized into the experience document).\n*   **Bookings**: Stored under `/users/{userId}/bookings/{bookingId}`, enabling easy management and access control based on user ownership. The `experienceId` is present to allow queries for bookings related to a specific experience. The `guideId` is denormalized from the experience to the booking to avoid needing to read the experience for rule evaluation. The `Experience` document is intended to be publicly readable, but only writable by the Guide.\n*   **Reviews**: Stored under `/experiences/{experienceId}/reviews/{reviewId}`, enabling all users to read reviews, while writes are restricted based on user ID. The User ID who created the review is stored in the `Review` to allow rules to check ownership. The `experienceId` is included in the Review to enable displaying all reviews for an experience. The `userId` is also stored in the review document.\n*   **Itineraries**: Stored under `/users/{userId}/itineraries/{itineraryId}`, enabling user-specific access and management of itineraries.\n*   **Narrative Content**: Stored under `/narrative_content/{contentId}`, with public read access but restricted write access to authorized personnel only. This collection ensures all users can read the core narrative content required to build an interactive and story-driven user experience.\n\nThis structure supports QAPs by segregating data based on access requirements, enabling secure list operations without filtering. For example, listing itineraries under `/users/{userId}/itineraries` only requires checking the user ID in the path, without needing to inspect document contents."
+  }
+}
