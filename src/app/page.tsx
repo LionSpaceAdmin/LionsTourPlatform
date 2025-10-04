@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -34,6 +35,7 @@ const pillars = [
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-landing');
+  const plannerCtaImage = PlaceHolderImages.find((img) => img.id === 'ai-planner-cta');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -136,13 +138,15 @@ export default function Home() {
               </div>
             </div>
             <div className="h-64 md:h-full relative">
+              {plannerCtaImage && (
                 <Image
-                    src="https://picsum.photos/seed/123/800/600"
-                    alt="AI Planner visualization"
+                    src={plannerCtaImage.imageUrl}
+                    alt={plannerCtaImage.description}
                     fill
                     className="object-cover"
-                    data-ai-hint="map travel"
+                    data-ai-hint={plannerCtaImage.imageHint}
                 />
+              )}
             </div>
           </div>
         </div>

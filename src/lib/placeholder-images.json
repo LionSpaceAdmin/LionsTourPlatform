@@ -33,7 +33,7 @@
     {
       "id": "experience-5",
       "description": "A view of the Bahá'í Gardens in Haifa.",
-      "imageUrl": "https://images.unsplash.com/photo-1715882352252-168c62059a11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxIYWlmYSUyMGdhcmRlbnN8ZW58MHx8fHwxNzU5NjA5OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1715882352252-168c62059a11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxIYWlmYSUyMGdhcmRlbnN8ZW58MHx8fHwxNzU5NjA5OTQwfDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "Haifa gardens"
     },
     {
@@ -45,23 +45,29 @@
     {
       "id": "guide-1",
       "description": "Portrait of a friendly tour guide.",
-      "imageUrl": "https://images.unsplash.com/photo-1568153878744-22637b3fa3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1568153878744-22637b3fa3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "guide portrait"
     },
     {
       "id": "guide-2",
       "description": "Portrait of an experienced tour guide.",
-      "imageUrl": "https://images.unsplash.com/photo-1600261731256-3c6622403e69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600261731256-3c6622403e69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "guide portrait"
     },
     {
       "id": "account-hero",
       "description": "A traveler looking over a vast desert landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1613109526778-27605f1f27d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NjA0OTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1613109526778-27605f1f27d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NjA0OTU3fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "desert landscape"
     },
     {
       "id": "ai-planner-hero",
+      "description": "A person pointing at a map with pins.",
+      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "map travel"
+    },
+    {
+      "id": "ai-planner-cta",
       "description": "A person pointing at a map with pins.",
       "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map travel"
