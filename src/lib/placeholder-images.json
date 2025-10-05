@@ -51,8 +51,14 @@
     {
       "id": "guide-2",
       "description": "Portrait of an experienced tour guide.",
-      "imageUrl": "https://images.unsplash.com/photo-1600261731256-3c6622403e69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600261731256-3c6622403e69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "guide portrait"
+    },
+    {
+      "id": "guide-3",
+      "description": "Portrait of an adventurous tour guide in a desert setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIxODMzNTEyfDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "male portrait"
     },
     {
       "id": "account-hero",
@@ -63,7 +69,7 @@
     {
       "id": "ai-planner-hero",
       "description": "A person pointing at a map with pins.",
-      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "map travel"
     },
     {
