@@ -4,9 +4,21 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative h-[90vh] flex items-center justify-center text-center text-white bg-black">
-      {/* The video element was replaced with the requested text. */}
-      <p>שים לב לבעיות</p>
-      <div className="relative z-10 max-w-4xl mx-auto px-4 hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover brightness-50"
+        poster="/placeholder-israel-video-poster.jpg"
+      >
+        <source
+          src="https://storage.googleapis.com/proudcity/israel/pexels-eyal-goodman-4655425_1080p.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative z-10 max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-shadow-lg">
           You feel it, don&apos;t you?
         </h1>
