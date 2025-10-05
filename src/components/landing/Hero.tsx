@@ -13,7 +13,7 @@ const Hero = () => {
         poster="https://storage.googleapis.com/proudcity/israel/hero-video-poster.jpg"
       >
         <source
-          src="https://storage.googleapis.com/proudcity/israel/pexels-parviz-badalov-8902871%20(1080p).mp4"
+          src="https://storage.googleapis.com/proudcity/israel/pexels-eyal-goodman-4655425_1080p.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
