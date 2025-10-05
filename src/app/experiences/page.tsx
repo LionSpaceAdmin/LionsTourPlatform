@@ -60,7 +60,7 @@ export default function ExperiencesPage() {
       )}
       {error && (
         <div className="text-center py-12 text-destructive">
-          <p>Sorry, we couldn't load the experiences.</p>
+          <p>Sorry, we couldn&apos;t load the experiences.</p>
           <p className="text-sm">{error.message}</p>
         </div>
       )}
