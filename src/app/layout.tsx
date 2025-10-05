@@ -1,13 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { FirebaseClientProvider } from '@/firebase';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'Lions of Zion',
@@ -21,12 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          inter.variable
-        )}
-      >
+      <body className={cn('min-h-screen bg-background font-sans antialiased')}>
         <FirebaseClientProvider>
           <Header />
           <main className="flex-grow">{children}</main>
@@ -37,5 +29,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-    

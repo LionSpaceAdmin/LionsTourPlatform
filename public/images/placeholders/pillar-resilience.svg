@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="desert" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="#451a03"/>
+  <path d="M0 260 Q150 220 300 260 T600 260 V400 H0 Z" fill="url(#desert)"/>
+  <path d="M0 300 Q180 260 360 300 T600 300 V400 H0 Z" fill="#92400e" opacity="0.75"/>
+  <path d="M260 120 L320 200 L280 200 Z" fill="#fde68a" opacity="0.6"/>
+  <circle cx="300" cy="160" r="60" fill="#fef3c7" opacity="0.35"/>
+  <text x="50%" y="340" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="36" fill="#fcd34d" text-anchor="middle" opacity="0.45">Resilience</text>
+</svg>

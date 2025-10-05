@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="sunset" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sunset)"/>
+  <path d="M0 380 C300 360 900 360 1200 380 V800 H0 Z" fill="url(#water)"/>
+  <path d="M0 540 C280 520 920 520 1200 540 V800 H0 Z" fill="#0c4a6e" opacity="0.75"/>
+  <g fill="#bae6fd" opacity="0.7">
+    <ellipse cx="300" cy="470" rx="160" ry="26"/>
+    <ellipse cx="600" cy="500" rx="180" ry="28"/>
+    <ellipse cx="920" cy="470" rx="150" ry="22"/>
+  </g>
+  <circle cx="960" cy="220" r="140" fill="#fef9c3" opacity="0.35"/>
+  <text x="50%" y="720" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="48" fill="#0f172a" text-anchor="middle" opacity="0.3">Dead Sea Calm</text>
+</svg>

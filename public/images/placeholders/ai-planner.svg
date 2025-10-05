@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="planner" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#planner)"/>
+  <g fill="#bbf7d0" opacity="0.65">
+    <rect x="200" y="160" width="260" height="300" rx="32"/>
+    <rect x="470" y="120" width="260" height="360" rx="32"/>
+    <rect x="740" y="180" width="260" height="280" rx="32"/>
+  </g>
+  <g stroke="#facc15" stroke-width="6" stroke-linecap="round" opacity="0.5">
+    <path d="M260 200 H380"/>
+    <path d="M530 160 H650"/>
+    <path d="M800 220 H920"/>
+  </g>
+  <text x="50%" y="480" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="48" fill="#fefce8" text-anchor="middle" opacity="0.35">AI Travel Planner</text>
+</svg>

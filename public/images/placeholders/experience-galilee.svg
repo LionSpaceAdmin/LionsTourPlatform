@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="morning" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="70%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#morning)"/>
+  <path d="M0 420 Q300 360 600 420 T1200 420 V800 H0 Z" fill="#1e40af" opacity="0.45"/>
+  <path d="M0 460 Q280 380 560 460 T1120 460 Q1200 480 1200 520 V800 H0 Z" fill="url(#field)"/>
+  <path d="M0 520 Q300 480 600 520 T1200 520 V800 H0 Z" fill="#14532d" opacity="0.85"/>
+  <g fill="#dcfce7" opacity="0.6">
+    <circle cx="260" cy="360" r="32"/>
+    <circle cx="340" cy="340" r="24"/>
+    <circle cx="320" cy="390" r="20"/>
+  </g>
+  <text x="50%" y="720" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="48" fill="#f0fdfa" text-anchor="middle" opacity="0.3">Galilee Trails</text>
+</svg>
