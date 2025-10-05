@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import OracleChat from '@/components/ai/OracleChat';
 import { FirebaseClientProvider } from '@/firebase';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -33,9 +32,10 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
           <Toaster />
-          <OracleChat />
         </FirebaseClientProvider>
       </body>
     </html>
   );
 }
+
+    

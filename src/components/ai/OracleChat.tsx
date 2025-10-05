@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -23,8 +23,12 @@ type Message = {
   content: string;
 };
 
-export default function OracleChat() {
-  const [isOpen, setIsOpen] = useState(false);
+interface OracleChatProps {
+    isOpen: boolean;
+    onOpenChange: (isOpen: boolean) => void;
+}
+
+export default function OracleChat({ isOpen, onOpenChange }: OracleChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -60,9 +64,8 @@ export default function OracleChat() {
     setLoading(false);
   };
   
-  const handleOpenChange = (open: boolean) => {
-    setIsOpen(open);
-    if (open && messages.length === 0) {
+  useEffect(() => {
+    if (isOpen && messages.length === 0) {
         setMessages([
             {
                 role: 'assistant',
@@ -70,18 +73,11 @@ export default function OracleChat() {
             }
         ])
     }
-  }
+  }, [isOpen, messages.length]);
+
 
   return (
-    <>
-      <Button
-        className="fixed bottom-6 right-6 h-16 w-16 rounded-full bg-accent text-accent-foreground shadow-2xl hover:bg-accent/90"
-        onClick={() => handleOpenChange(true)}
-      >
-        <MessageCircle className="h-8 w-8" />
-        <span className="sr-only">Open Oracle Chat</span>
-      </Button>
-      <Dialog open={isOpen} onOpenChange={handleOpenChange}>
+      <Dialog open={isOpen} onOpenChange={onOpenChange}>
         <DialogContent className="sm:max-w-[425px] md:max-w-lg grid-rows-[auto_1fr_auto] p-0 max-h-[90vh]">
           <DialogHeader className="p-6 pb-4">
             <DialogTitle className="flex items-center gap-2">
@@ -140,6 +136,7 @@ export default function OracleChat() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-    </>
   );
 }
+
+    
