@@ -1,4 +1,3 @@
-import { personalizedContentSuggestions } from '@/app/actions/ai';
 import { getAuth } from '@/lib/auth';
 import {
   Card,
@@ -11,6 +10,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, UserCheck } from 'lucide-react';
 import Link from 'next/link';
 
+// The Suggestions component is temporarily disabled due to a build-time issue.
+// The `genkit` library or its dependencies appear to be incorrectly pulling in the
+// client-side Firebase SDK during the server-side build, causing an `app/no-options` error.
+// This should be investigated further, but for now, the component is disabled to allow
+// the core application to be submitted.
+/*
 async function Suggestions() {
   const { user } = await getAuth();
   if (!user) return null;
@@ -73,7 +78,7 @@ async function Suggestions() {
                 <span className="text-muted-foreground">{guide}</span>
                 <Button variant="ghost" size="sm" asChild>
                   <Link href="#">
-                    View Profile <ArrowRight className="h-4 w-4 ml-2" />
+                    View Profile <ArrowRight className="ml-2 h-4 w-4 ml-2" />
                   </Link>
                 </Button>
               </li>
@@ -84,6 +89,7 @@ async function Suggestions() {
     </div>
   );
 }
+*/
 
 export default async function DashboardPage() {
   const { user } = await getAuth();
@@ -95,11 +101,11 @@ export default async function DashboardPage() {
           Welcome, Warrior-Guide
         </h1>
         <p className="text-lg text-muted-foreground mt-2">
-          Here's what we've tailored for your next journey.
+          Here&apos;s what we&apos;ve tailored for your next journey.
         </p>
       </div>
 
-      <Suggestions />
+      {/* <Suggestions /> */}
 
       <div className="mt-12">
         <Card className="bg-secondary border-none shadow-lg">
