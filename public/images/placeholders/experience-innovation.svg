@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="techSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <radialGradient id="pulse" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#c4b5fd" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 0 H80" stroke="#38bdf8" stroke-opacity="0.1" stroke-width="2" />
+      <path d="M0 40 H80" stroke="#38bdf8" stroke-opacity="0.08" stroke-width="2" />
+      <path d="M0 0 V80" stroke="#38bdf8" stroke-opacity="0.1" stroke-width="2" />
+      <path d="M40 0 V80" stroke="#38bdf8" stroke-opacity="0.08" stroke-width="2" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#techSky)" />
+  <rect width="1200" height="800" fill="url(#grid)" />
+  <circle cx="600" cy="280" r="260" fill="url(#pulse)" />
+  <g fill="url(#neon)">
+    <rect x="160" y="380" width="90" height="250" rx="10" opacity="0.7" />
+    <rect x="280" y="340" width="120" height="290" rx="12" opacity="0.8" />
+    <rect x="440" y="300" width="140" height="330" rx="14" opacity="0.95" />
+    <rect x="620" y="360" width="110" height="270" rx="12" opacity="0.8" />
+    <rect x="760" y="320" width="130" height="310" rx="16" opacity="0.85" />
+    <rect x="920" y="360" width="120" height="270" rx="12" opacity="0.7" />
+    <path d="M520 260 L560 200 L600 260 L560 260 L560 630 L520 630 Z" opacity="0.8" />
+    <path d="M740 270 L790 210 L840 270 L800 270 L800 640 L760 640 Z" opacity="0.8" />
+  </g>
+  <path d="M0 640 Q240 600 480 640 T960 640 T1200 640 V800 H0 Z" fill="#020617" opacity="0.85" />
+  <text x="50%" y="720" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="46" fill="#e0f2fe" text-anchor="middle" opacity="0.4">Tel Aviv Innovation</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="aiSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <radialGradient id="aiGlow" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#f0abfc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f0abfc" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="aiPanel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <pattern id="aiGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="none" stroke="#a855f7" stroke-opacity="0.1" />
+      <circle cx="10" cy="10" r="2" fill="#a855f7" opacity="0.2" />
+      <circle cx="70" cy="70" r="2" fill="#38bdf8" opacity="0.2" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#aiSky)" />
+  <rect width="1200" height="600" fill="url(#aiGrid)" />
+  <circle cx="360" cy="200" r="220" fill="url(#aiGlow)" />
+  <g transform="translate(220,160)">
+    <rect width="760" height="320" rx="36" fill="#0f172a" opacity="0.7" />
+    <rect x="40" y="40" width="680" height="240" rx="28" fill="#111827" opacity="0.8" />
+    <rect x="40" y="40" width="220" height="240" rx="28" fill="url(#aiPanel)" opacity="0.95" />
+    <circle cx="150" cy="160" r="70" fill="#0f172a" opacity="0.35" />
+    <path d="M110 160 Q150 100 190 160 T110 160" fill="none" stroke="#fef3c7" stroke-width="6" stroke-linecap="round" />
+    <g transform="translate(320,80)" fill="#f8fafc" opacity="0.65">
+      <rect width="280" height="16" rx="8" />
+      <rect y="48" width="360" height="16" rx="8" />
+      <rect y="96" width="320" height="16" rx="8" />
+      <rect y="144" width="340" height="16" rx="8" />
+    </g>
+  </g>
+  <text x="50%" y="520" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="44" fill="#e9d5ff" text-anchor="middle" opacity="0.6">AI Journey Planner</text>
+</svg>

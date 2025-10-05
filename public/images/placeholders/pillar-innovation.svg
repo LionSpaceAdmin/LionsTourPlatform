@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="innovationBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <linearGradient id="innovationLines" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <radialGradient id="innovationGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#c4b5fd" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#innovationBg)" />
+  <circle cx="400" cy="200" r="200" fill="url(#innovationGlow)" />
+  <g stroke="url(#innovationLines)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <path d="M120 360 L240 260 L360 320 L480 220 L600 300 L720 220" />
+    <path d="M200 420 L320 340 L440 420 L560 320 L680 360" opacity="0.6" />
+  </g>
+  <g fill="url(#innovationLines)">
+    <circle cx="120" cy="360" r="12" />
+    <circle cx="240" cy="260" r="14" />
+    <circle cx="360" cy="320" r="10" />
+    <circle cx="480" cy="220" r="16" />
+    <circle cx="600" cy="300" r="12" />
+    <circle cx="720" cy="220" r="14" />
+    <circle cx="200" cy="420" r="10" />
+    <circle cx="320" cy="340" r="12" />
+    <circle cx="440" cy="420" r="12" />
+    <circle cx="560" cy="320" r="12" />
+    <circle cx="680" cy="360" r="12" />
+  </g>
+  <text x="50%" y="520" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="40" fill="#e0f2fe" text-anchor="middle" opacity="0.45">Innovation Current</text>
+</svg>

@@ -2,105 +2,105 @@
   "placeholderImages": [
     {
       "id": "hero-landing",
-      "description": "A panoramic view of the Jerusalem skyline at sunset, with the Dome of the Rock prominent.",
-      "imageUrl": "https://images.unsplash.com/photo-1638468090298-a555e409b493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxKZXJ1c2FsZW0lMjBzdW5zZXR8ZW58MHx8fHwxNzU5NjA5OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Jerusalem sunset"
+      "description": "Sunrise skyline over layered Judean hills and the Old City.",
+      "imageUrl": "/images/placeholders/hero-journey.svg",
+      "imageHint": "sunrise skyline with city silhouette"
     },
     {
       "id": "experience-1",
-      "description": "Exploring the ancient alleyways of the Old City of Jerusalem.",
-      "imageUrl": "https://images.unsplash.com/photo-1628175810529-8cb4a4d374e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxKZXJ1c2FsZW0lMjBvbGQlMjBjaXR5fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Jerusalem old city"
+      "description": "Golden-stone gateway inspired by Jerusalem's Old City walls.",
+      "imageUrl": "/images/placeholders/experience-old-city.svg",
+      "imageHint": "old city gate at dusk illustration"
     },
     {
       "id": "experience-2",
-      "description": "Hiking through the lush greenery of the Galilee region.",
-      "imageUrl": "https://images.unsplash.com/photo-1642756950745-4bbb59cde16a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxHYWxpbGVlJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc1OTYwOTkzOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Galilee landscape"
+      "description": "Morning light over the Galilee hills mirrored in the water.",
+      "imageUrl": "/images/placeholders/experience-galilee.svg",
+      "imageHint": "galilee sunrise over water"
     },
     {
       "id": "experience-3",
-      "description": "A vibrant market scene in Tel Aviv's Carmel Market.",
-      "imageUrl": "https://images.unsplash.com/photo-1674003487179-2d520253cbb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxUZWwlMjBBdml2JTIwbWFya2V0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Tel Aviv market"
+      "description": "Night market awnings glowing with lantern light.",
+      "imageUrl": "/images/placeholders/experience-market.svg",
+      "imageHint": "shuk awnings and lanterns"
     },
     {
       "id": "experience-4",
-      "description": "Floating in the mineral-rich waters of the Dead Sea.",
-      "imageUrl": "https://images.unsplash.com/photo-1590137542363-d5af86ff65a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxEZWFkJTIwU2VhfGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Dead Sea"
+      "description": "Dead Sea horizon with mirrored salt flats at twilight.",
+      "imageUrl": "/images/placeholders/experience-deadsea.svg",
+      "imageHint": "dead sea reflective salt flats"
     },
     {
       "id": "experience-5",
-      "description": "A view of the Bahá'í Gardens in Haifa.",
-      "imageUrl": "https://images.unsplash.com/photo-1715882352252-168c62059a11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxIYWlmYSUyMGdhcmRlbnN8ZW58MHx8fHwxNzU5NjA5OTQwfDA&ixlibrb-4.1.0&q=80&w=1080",
-      "imageHint": "Haifa gardens"
+      "description": "Haifa's Baháʼí terraces cascading beneath a golden dome.",
+      "imageUrl": "/images/placeholders/experience-haifa.svg",
+      "imageHint": "bahai terraces with dome"
     },
     {
       "id": "experience-6",
-      "description": "Modern architecture in the city of Tel Aviv.",
-      "imageUrl": "https://images.unsplash.com/photo-1740573909833-731db2bab6aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxUZWwlMjBBdml2JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Tel Aviv architecture"
+      "description": "Tel Aviv skyline rendered with neon currents and data grid.",
+      "imageUrl": "/images/placeholders/experience-innovation.svg",
+      "imageHint": "tel aviv neon skyline"
     },
     {
       "id": "guide-1",
-      "description": "Portrait of a friendly tour guide.",
-      "imageUrl": "https://images.unsplash.com/photo-1568153878744-22637b3fa3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "guide portrait"
+      "description": "Illustrated portrait card with Avi Ronen's palette.",
+      "imageUrl": "/images/placeholders/guide-1.svg",
+      "imageHint": "guide avatar avi ronen"
     },
     {
       "id": "guide-2",
-      "description": "Portrait of an experienced tour guide.",
-      "imageUrl": "https://images.unsplash.com/photo-1600261731256-3c6622403e69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxndWlkZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTYwOTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "guide portrait"
+      "description": "Illustrated portrait card with Dalia Levi's palette.",
+      "imageUrl": "/images/placeholders/guide-2.svg",
+      "imageHint": "guide avatar dalia levi"
     },
     {
       "id": "guide-3",
-      "description": "Portrait of an adventurous tour guide in a desert setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIxODMzNTEyfDA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "male portrait"
+      "description": "Illustrated portrait card with Yosef Alon's palette.",
+      "imageUrl": "/images/placeholders/guide-3.svg",
+      "imageHint": "guide avatar yosef alon"
     },
     {
       "id": "account-hero",
-      "description": "A traveler looking over a vast desert landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1613109526778-27605f1f27d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NjA0OTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "desert landscape"
+      "description": "Sunrise gradient landscape banner for the account dashboard.",
+      "imageUrl": "/images/placeholders/account-hero.svg",
+      "imageHint": "account sunrise banner"
     },
     {
       "id": "ai-planner-hero",
-      "description": "A person pointing at a map with pins.",
-      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "map travel"
+      "description": "Futuristic control panel celebrating the AI journey planner.",
+      "imageUrl": "/images/placeholders/ai-planner.svg",
+      "imageHint": "ai planner control interface"
     },
     {
       "id": "ai-planner-cta",
-      "description": "A person pointing at a map with pins.",
-      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "map travel"
+      "description": "Futuristic control panel celebrating the AI journey planner.",
+      "imageUrl": "/images/placeholders/ai-planner.svg",
+      "imageHint": "ai planner control interface"
     },
     {
       "id": "pillar-faith",
-      "description": "The Western Wall in Jerusalem, a site of prayer and pilgrimage.",
-      "imageUrl": "https://images.unsplash.com/photo-1574362198076-52403d55169a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxXZXN0ZXJuJTIwV2FsbCUyMEplcnVzYWxlbXxlbnwwfHx8fDE3MjE4MzE5ODl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "Western Wall"
+      "description": "Jerusalem stone pillars illuminated by sacred glow.",
+      "imageUrl": "/images/placeholders/pillar-faith.svg",
+      "imageHint": "faith pillars with golden light"
     },
     {
       "id": "pillar-history",
-      "description": "The ancient Roman ruins at Caesarea National Park.",
-      "imageUrl": "https://images.unsplash.com/photo-1622342539031-64b1238a3a0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDYWVzYXJlYSUyMFJ1aW5zfGVufDB8fHx8MTcyMTgzMjAyNnww&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "Caesarea ruins"
+      "description": "Moonlit ruins lined with timeless stone columns.",
+      "imageUrl": "/images/placeholders/pillar-history.svg",
+      "imageHint": "history pillars under moonlight"
     },
     {
       "id": "pillar-innovation",
-      "description": "Modern skyline of Tel Aviv, showcasing its innovative architecture.",
-      "imageUrl": "https://images.unsplash.com/photo-1605639142203-99c52c2c7b94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxUZWwlMjBBdml2JTIwc2t5bGluZXxlbnwwfHx8fDE3MjE4MzIwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "Tel Aviv"
+      "description": "Electric network of innovation nodes across the skyline.",
+      "imageUrl": "/images/placeholders/pillar-innovation.svg",
+      "imageHint": "innovation electric network"
     },
     {
       "id": "pillar-resilience",
-      "description": "An Ibex stands on a cliff in the Ein Gedi nature reserve, symbolizing resilience.",
-      "imageUrl": "https://images.unsplash.com/photo-1635399732463-547055734898?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxFJTIwR2VkaSUyMGliZXh8ZW58MHx8fHwxNzIxODMyMDg5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "Ein Gedi"
+      "description": "Desert ridgeline with resilient sunrise and rugged peaks.",
+      "imageUrl": "/images/placeholders/pillar-resilience.svg",
+      "imageHint": "desert ridgeline sunrise"
     }
   ]
 }

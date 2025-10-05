@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="resilienceSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="resilienceSand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <radialGradient id="resilienceGlow" cx="30%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#resilienceSky)" />
+  <circle cx="240" cy="160" r="140" fill="url(#resilienceGlow)" />
+  <path d="M0 360 Q160 300 320 340 T640 320 T800 340 V600 H0 Z" fill="#7c2d12" opacity="0.7" />
+  <path d="M0 420 Q180 360 360 400 T720 380 T800 420 V600 H0 Z" fill="url(#resilienceSand)" opacity="0.85" />
+  <path d="M0 480 Q200 440 400 470 T800 460 V600 H0 Z" fill="#fef08a" opacity="0.6" />
+  <g stroke="#fef3c7" stroke-width="10" stroke-linecap="round" opacity="0.5">
+    <path d="M160 420 L210 340 L260 420" />
+    <path d="M420 430 L470 350 L520 430" />
+    <path d="M620 410 L660 340 L700 410" />
+  </g>
+  <text x="50%" y="520" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="40" fill="#fef3c7" text-anchor="middle" opacity="0.4">Desert Resilience</text>
+</svg>

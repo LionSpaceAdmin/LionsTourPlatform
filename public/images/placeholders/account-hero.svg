@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <defs>
+    <linearGradient id="accountSky" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <radialGradient id="accountGlow" cx="80%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#93c5fd" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="accountLand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#accountSky)" />
+  <circle cx="920" cy="120" r="180" fill="url(#accountGlow)" />
+  <path d="M0 260 Q260 210 520 240 T1040 220 T1200 240 V400 H0 Z" fill="#1e293b" opacity="0.75" />
+  <path d="M0 300 Q260 260 520 280 T1040 260 T1200 280 V400 H0 Z" fill="url(#accountLand)" opacity="0.65" />
+  <path d="M0 340 Q240 320 480 330 T960 320 T1200 340 V400 H0 Z" fill="#fde68a" opacity="0.35" />
+  <text x="60" y="120" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="42" fill="#e0f2fe">Welcome back.</text>
+  <text x="60" y="170" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="24" fill="#bfdbfe" opacity="0.8">Your journey threads are ready whenever you are.</text>
+</svg>

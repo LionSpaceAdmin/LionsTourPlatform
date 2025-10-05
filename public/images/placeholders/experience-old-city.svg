@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="eveningSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="60%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="stone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <pattern id="stoneBlocks" width="120" height="80" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <rect width="120" height="80" fill="url(#stone)" opacity="0.9" />
+      <line x1="0" y1="40" x2="120" y2="40" stroke="#7f1d1d" stroke-opacity="0.18" stroke-width="6" />
+      <line x1="60" y1="0" x2="60" y2="40" stroke="#7f1d1d" stroke-opacity="0.18" stroke-width="6" />
+      <line x1="30" y1="40" x2="30" y2="80" stroke="#7f1d1d" stroke-opacity="0.2" stroke-width="6" />
+      <line x1="90" y1="40" x2="90" y2="80" stroke="#7f1d1d" stroke-opacity="0.2" stroke-width="6" />
+    </pattern>
+    <radialGradient id="gateGlow" cx="50%" cy="60%" r="45%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#eveningSky)" />
+  <g opacity="0.5">
+    <circle cx="300" cy="160" r="80" fill="#facc15" />
+    <circle cx="320" cy="160" r="60" fill="#fde68a" />
+  </g>
+  <path d="M0 560 Q300 490 600 560 T1200 560 V800 H0 Z" fill="#1f2937" opacity="0.55" />
+  <g transform="translate(180,180)">
+    <rect width="840" height="420" rx="48" fill="url(#stoneBlocks)" />
+    <rect x="260" y="60" width="320" height="200" fill="#7f1d1d" opacity="0.25" />
+    <path d="M300 420 C300 300 540 300 540 420 L540 520 L300 520 Z" fill="#431407" opacity="0.6" />
+    <path d="M320 420 C320 320 520 320 520 420 L520 520 L320 520 Z" fill="#fde68a" opacity="0.3" />
+    <path d="M420 260 C480 180 520 180 580 260" stroke="#fde68a" stroke-width="16" stroke-linecap="round" opacity="0.45" />
+    <circle cx="440" cy="320" r="14" fill="#fef3c7" opacity="0.8" />
+    <circle cx="500" cy="320" r="14" fill="#fef3c7" opacity="0.8" />
+  </g>
+  <ellipse cx="600" cy="590" rx="360" ry="160" fill="url(#gateGlow)" opacity="0.4" />
+  <text x="50%" y="720" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="48" fill="#fef3c7" text-anchor="middle" opacity="0.3">Old City Evenings</text>
+</svg>

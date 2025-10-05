@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="skyHaifa" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+    <linearGradient id="terraceGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="50%" stop-color="#16a34a" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <linearGradient id="dome" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <pattern id="terraceLines" width="120" height="40" patternUnits="userSpaceOnUse">
+      <rect width="120" height="40" fill="url(#terraceGreen)" />
+      <rect y="28" width="120" height="4" fill="#bbf7d0" opacity="0.6" />
+      <rect y="8" width="120" height="4" fill="#bbf7d0" opacity="0.4" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyHaifa)" />
+  <ellipse cx="600" cy="320" rx="280" ry="180" fill="#22d3ee" opacity="0.35" />
+  <g transform="translate(200,180)">
+    <rect x="320" y="80" width="160" height="220" rx="80" fill="#f8fafc" opacity="0.4" />
+    <circle cx="400" cy="140" r="80" fill="url(#dome)" />
+    <rect x="360" y="220" width="80" height="160" fill="#f8fafc" opacity="0.75" />
+    <rect x="280" y="340" width="240" height="40" fill="#0f172a" opacity="0.4" />
+  </g>
+  <g transform="translate(80,360)">
+    <rect x="80" y="0" width="960" height="80" rx="40" fill="url(#terraceLines)" />
+    <rect x="120" y="120" width="880" height="80" rx="36" fill="url(#terraceLines)" />
+    <rect x="160" y="240" width="800" height="80" rx="32" fill="url(#terraceLines)" />
+    <rect x="220" y="360" width="680" height="80" rx="30" fill="url(#terraceLines)" />
+  </g>
+  <text x="50%" y="720" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="44" fill="#ecfdf5" text-anchor="middle" opacity="0.35">Haifa Terraces</text>
+</svg>
