@@ -1,28 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
-    <linearGradient id="sky" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="60%" stop-color="#1e3a8a"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+    <linearGradient id="dawnSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="45%" stop-color="#111827" />
+      <stop offset="80%" stop-color="#7c2d12" />
+      <stop offset="100%" stop-color="#f97316" />
     </linearGradient>
-    <linearGradient id="sun" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="hills" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop offset="0%" stop-color="#312e81"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
-      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#fde68a" stop-opacity="0"/>
+    <radialGradient id="sunAura" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#fbbf24" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0" />
     </radialGradient>
+    <linearGradient id="mountainLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="50%" stop-color="#3730a3" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="desertGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fcd34d" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="citySilhouette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur" />
+      <feBlend in="SourceGraphic" in2="blur" mode="screen" />
+    </filter>
+    <pattern id="stars" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="22" r="1.6" fill="#bae6fd" opacity="0.7" />
+      <circle cx="40" cy="12" r="1.2" fill="#bfdbfe" opacity="0.6" />
+      <circle cx="68" cy="32" r="1.4" fill="#f8fafc" opacity="0.8" />
+      <circle cx="28" cy="60" r="1.1" fill="#bae6fd" opacity="0.6" />
+      <circle cx="55" cy="70" r="1.5" fill="#facc15" opacity="0.7" />
+    </pattern>
   </defs>
-  <rect width="1600" height="900" fill="url(#sky)"/>
-  <circle cx="800" cy="340" r="240" fill="url(#sun)"/>
-  <ellipse cx="800" cy="340" rx="420" ry="320" fill="url(#glow)"/>
-  <path d="M0 520 Q400 440 800 520 T1600 520 V900 H0 Z" fill="#0b1120" opacity="0.8"/>
-  <path d="M0 560 Q450 470 900 560 T1600 560 V900 H0 Z" fill="url(#hills)"/>
-  <path d="M0 600 Q500 510 1000 600 T1600 600 V900 H0 Z" fill="#111827"/>
-  <text x="50%" y="780" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="64" fill="#f8fafc" text-anchor="middle" opacity="0.2">Lions of Zion</text>
+  <rect width="1600" height="900" fill="url(#dawnSky)" />
+  <rect width="1600" height="520" fill="url(#stars)" opacity="0.45" />
+  <g filter="url(#softGlow)">
+    <circle cx="800" cy="340" r="280" fill="url(#sunAura)" />
+  </g>
+  <path d="M0 520 Q320 460 640 520 T1280 520 T1600 520 V900 H0 Z" fill="#020617" opacity="0.65" />
+  <path d="M0 540 Q280 440 560 520 T1120 520 T1600 540 V900 H0 Z" fill="url(#mountainLight)" opacity="0.95" />
+  <path d="M0 620 Q300 560 600 600 T1200 620 T1600 600 V900 H0 Z" fill="#1e293b" opacity="0.85" />
+  <g fill="url(#citySilhouette)">
+    <rect x="220" y="420" width="70" height="150" rx="6" />
+    <rect x="300" y="380" width="110" height="190" rx="8" />
+    <rect x="440" y="360" width="90" height="210" rx="8" />
+    <rect x="560" y="400" width="130" height="170" rx="8" />
+    <rect x="730" y="360" width="150" height="210" rx="10" />
+    <rect x="920" y="380" width="120" height="190" rx="10" />
+    <rect x="1080" y="420" width="160" height="150" rx="12" />
+    <rect x="1280" y="410" width="90" height="160" rx="8" />
+    <path d="M640 350 L780 310 L840 310 L870 360 L820 360 L820 390 L690 390 Z" />
+    <path d="M1010 350 L1070 300 L1130 350 Z" />
+  </g>
+  <path d="M0 690 Q360 640 720 700 T1600 690 V900 H0 Z" fill="url(#desertGlow)" opacity="0.75" />
+  <path d="M0 760 Q400 710 800 750 T1600 760 V900 H0 Z" fill="#78350f" opacity="0.85" />
+  <text x="50%" y="840" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="58" fill="#f8fafc" text-anchor="middle" opacity="0.18" letter-spacing="0.4em">LIONS OF ZION</text>
 </svg>

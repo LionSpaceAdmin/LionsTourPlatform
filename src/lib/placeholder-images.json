@@ -2,105 +2,105 @@
   "placeholderImages": [
     {
       "id": "hero-landing",
-      "description": "Illustrated sunset skyline with layered Judean hills.",
+      "description": "Sunrise skyline over layered Judean hills and the Old City.",
       "imageUrl": "/images/placeholders/hero-journey.svg",
-      "imageHint": "sunset skyline illustration"
+      "imageHint": "sunrise skyline with city silhouette"
     },
     {
       "id": "experience-1",
-      "description": "Stylized stone walls evoking the Old City of Jerusalem.",
+      "description": "Golden-stone gateway inspired by Jerusalem's Old City walls.",
       "imageUrl": "/images/placeholders/experience-old-city.svg",
-      "imageHint": "old city stone pattern"
+      "imageHint": "old city gate at dusk illustration"
     },
     {
       "id": "experience-2",
-      "description": "Bright morning landscape inspired by the Galilee.",
+      "description": "Morning light over the Galilee hills mirrored in the water.",
       "imageUrl": "/images/placeholders/experience-galilee.svg",
-      "imageHint": "galilee hills illustration"
+      "imageHint": "galilee sunrise over water"
     },
     {
       "id": "experience-3",
-      "description": "Vibrant abstract market scene with glowing awnings.",
+      "description": "Night market awnings glowing with lantern light.",
       "imageUrl": "/images/placeholders/experience-market.svg",
-      "imageHint": "market lights abstraction"
+      "imageHint": "shuk awnings and lanterns"
     },
     {
       "id": "experience-4",
-      "description": "Minimal Dead Sea horizon with mirrored water.",
+      "description": "Dead Sea horizon with mirrored salt flats at twilight.",
       "imageUrl": "/images/placeholders/experience-deadsea.svg",
-      "imageHint": "dead sea horizon illustration"
+      "imageHint": "dead sea reflective salt flats"
     },
     {
       "id": "experience-5",
-      "description": "Modern take on the Bahá'í terraces in Haifa.",
+      "description": "Haifa's Baháʼí terraces cascading beneath a golden dome.",
       "imageUrl": "/images/placeholders/experience-haifa.svg",
-      "imageHint": "haifa terraces illustration"
+      "imageHint": "bahai terraces with dome"
     },
     {
       "id": "experience-6",
-      "description": "Tel Aviv skyline rendered with neon-inspired lines.",
+      "description": "Tel Aviv skyline rendered with neon currents and data grid.",
       "imageUrl": "/images/placeholders/experience-innovation.svg",
-      "imageHint": "tel aviv skyline illustration"
+      "imageHint": "tel aviv neon skyline"
     },
     {
       "id": "guide-1",
-      "description": "Bold blue portrait card with the initials AR.",
+      "description": "Illustrated portrait card with Avi Ronen's palette.",
       "imageUrl": "/images/placeholders/guide-1.svg",
-      "imageHint": "guide avatar AR"
+      "imageHint": "guide avatar avi ronen"
     },
     {
       "id": "guide-2",
-      "description": "Warm amber portrait card with the initials DL.",
+      "description": "Illustrated portrait card with Dalia Levi's palette.",
       "imageUrl": "/images/placeholders/guide-2.svg",
-      "imageHint": "guide avatar DL"
+      "imageHint": "guide avatar dalia levi"
     },
     {
       "id": "guide-3",
-      "description": "Teal portrait card with the initials YA.",
+      "description": "Illustrated portrait card with Yosef Alon's palette.",
       "imageUrl": "/images/placeholders/guide-3.svg",
-      "imageHint": "guide avatar YA"
+      "imageHint": "guide avatar yosef alon"
     },
     {
       "id": "account-hero",
-      "description": "Abstract landscape banner for the account dashboard.",
+      "description": "Sunrise gradient landscape banner for the account dashboard.",
       "imageUrl": "/images/placeholders/account-hero.svg",
-      "imageHint": "account banner illustration"
+      "imageHint": "account sunrise banner"
     },
     {
       "id": "ai-planner-hero",
-      "description": "Gradient poster celebrating the AI travel planner.",
+      "description": "Futuristic control panel celebrating the AI journey planner.",
       "imageUrl": "/images/placeholders/ai-planner.svg",
-      "imageHint": "ai planner illustration"
+      "imageHint": "ai planner control interface"
     },
     {
       "id": "ai-planner-cta",
-      "description": "Gradient poster celebrating the AI travel planner.",
+      "description": "Futuristic control panel celebrating the AI journey planner.",
       "imageUrl": "/images/placeholders/ai-planner.svg",
-      "imageHint": "ai planner illustration"
+      "imageHint": "ai planner control interface"
     },
     {
       "id": "pillar-faith",
-      "description": "Warm-toned block pattern inspired by Jerusalem stone.",
+      "description": "Jerusalem stone pillars illuminated by sacred glow.",
       "imageUrl": "/images/placeholders/pillar-faith.svg",
-      "imageHint": "faith pillar illustration"
+      "imageHint": "faith pillars with golden light"
     },
     {
       "id": "pillar-history",
-      "description": "Nighttime ruins scene with towering pillars.",
+      "description": "Moonlit ruins lined with timeless stone columns.",
       "imageUrl": "/images/placeholders/pillar-history.svg",
-      "imageHint": "history pillar illustration"
+      "imageHint": "history pillars under moonlight"
     },
     {
       "id": "pillar-innovation",
-      "description": "Electric skyline connected by glowing nodes.",
+      "description": "Electric network of innovation nodes across the skyline.",
       "imageUrl": "/images/placeholders/pillar-innovation.svg",
-      "imageHint": "innovation pillar illustration"
+      "imageHint": "innovation electric network"
     },
     {
       "id": "pillar-resilience",
-      "description": "Desert ridgeline with resilient sunlight.",
+      "description": "Desert ridgeline with resilient sunrise and rugged peaks.",
       "imageUrl": "/images/placeholders/pillar-resilience.svg",
-      "imageHint": "resilience pillar illustration"
+      "imageHint": "desert ridgeline sunrise"
     }
   ]
 }

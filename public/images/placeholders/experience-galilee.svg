@@ -1,22 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
   <defs>
-    <linearGradient id="morning" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="70%" stop-color="#0f766e"/>
+    <linearGradient id="dawn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="45%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#38bdf8" />
     </linearGradient>
-    <linearGradient id="field" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop offset="0%" stop-color="#16a34a"/>
-      <stop offset="100%" stop-color="#166534"/>
+    <linearGradient id="lake" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="50%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#22d3ee" />
     </linearGradient>
+    <linearGradient id="hills" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <radialGradient id="sunrise" cx="50%" cy="35%" r="35%">
+      <stop offset="0%" stop-color="#fef9c3" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#fcd34d" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="ripples" width="40" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 6 Q10 0 20 6 T40 6" fill="none" stroke="#bae6fd" stroke-width="1.2" opacity="0.4" />
+    </pattern>
   </defs>
-  <rect width="1200" height="800" fill="url(#morning)"/>
-  <path d="M0 420 Q300 360 600 420 T1200 420 V800 H0 Z" fill="#1e40af" opacity="0.45"/>
-  <path d="M0 460 Q280 380 560 460 T1120 460 Q1200 480 1200 520 V800 H0 Z" fill="url(#field)"/>
-  <path d="M0 520 Q300 480 600 520 T1200 520 V800 H0 Z" fill="#14532d" opacity="0.85"/>
-  <g fill="#dcfce7" opacity="0.6">
-    <circle cx="260" cy="360" r="32"/>
-    <circle cx="340" cy="340" r="24"/>
-    <circle cx="320" cy="390" r="20"/>
-  </g>
-  <text x="50%" y="720" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="48" fill="#f0fdfa" text-anchor="middle" opacity="0.3">Galilee Trails</text>
+  <rect width="1200" height="800" fill="url(#dawn)" />
+  <circle cx="600" cy="260" r="200" fill="url(#sunrise)" />
+  <path d="M0 460 Q220 380 440 440 T880 420 T1200 460 V800 H0 Z" fill="url(#hills)" opacity="0.9" />
+  <path d="M0 520 Q240 470 480 520 T960 500 T1200 540 V800 H0 Z" fill="#0f766e" opacity="0.85" />
+  <path d="M0 600 Q200 560 400 580 T800 600 T1200 590 V800 H0 Z" fill="url(#lake)" />
+  <rect x="0" y="600" width="1200" height="200" fill="url(#ripples)" opacity="0.45" />
+  <text x="50%" y="740" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="46" fill="#ecfeff" text-anchor="middle" opacity="0.35">Galilee Morning</text>
 </svg>

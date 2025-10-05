@@ -38,8 +38,10 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: [
     'https://6000-firebase-studio-1759607598488.cluster-p5o54ufozbgxywgwqxykwgahws.cloudworkstations.dev',
     'http://localhost',
+    'http://localhost:3000',
     'http://localhost:9002',
     'http://127.0.0.1',
+    'http://127.0.0.1:3000',
     'http://127.0.0.1:9002',
   ],
 };
