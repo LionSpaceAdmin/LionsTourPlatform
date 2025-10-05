@@ -57,13 +57,13 @@
     {
       "id": "account-hero",
       "description": "A traveler looking over a vast desert landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1613109526778-27605f1f27d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NjA0OTU3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1613109526778-27605f1f27d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NjA0OTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "desert landscape"
     },
     {
       "id": "ai-planner-hero",
       "description": "A person pointing at a map with pins.",
-      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map travel"
     },
     {
@@ -71,6 +71,30 @@
       "description": "A person pointing at a map with pins.",
       "imageUrl": "https://images.unsplash.com/photo-1606933987885-1834b4d326bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjB0cmF2ZWx8ZW58MHx8fHwxNzU5NTM1ODAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map travel"
+    },
+    {
+      "id": "pillar-faith",
+      "description": "The Western Wall in Jerusalem, a site of prayer and pilgrimage.",
+      "imageUrl": "https://images.unsplash.com/photo-1574362198076-52403d55169a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxXZXN0ZXJuJTIwV2FsbCUyMEplcnVzYWxlbXxlbnwwfHx8fDE3MjE4MzE5ODl8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "Western Wall"
+    },
+    {
+      "id": "pillar-history",
+      "description": "The ancient Roman ruins at Caesarea National Park.",
+      "imageUrl": "https://images.unsplash.com/photo-1622342539031-64b1238a3a0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDYWVzYXJlYSUyMFJ1aW5zfGVufDB8fHx8MTcyMTgzMjAyNnww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "Caesarea ruins"
+    },
+    {
+      "id": "pillar-innovation",
+      "description": "Modern skyline of Tel Aviv, showcasing its innovative architecture.",
+      "imageUrl": "https://images.unsplash.com/photo-1605639142203-99c52c2c7b94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxUZWwlMjBBdml2JTIwc2t5bGluZXxlbnwwfHx8fDE3MjE4MzIwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "Tel Aviv"
+    },
+    {
+      "id": "pillar-resilience",
+      "description": "An Ibex stands on a cliff in the Ein Gedi nature reserve, symbolizing resilience.",
+      "imageUrl": "https://images.unsplash.com/photo-1635399732463-547055734898?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxFJTIwR2VkaSUyMGliZXh8ZW58MHx8fHwxNzIxODMyMDg5fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "Ein Gedi"
     }
   ]
 }
